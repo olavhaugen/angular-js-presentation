@@ -8,31 +8,7 @@
 
 		<!-- Edit -->
 		<div ng-if="contact.isEditing">
-			<ng-form name="contactForm">
-			
-			<a href="javascript:void(0)" 
-			   ng-click="contact.isEditing = false" 
-			   ng-disabled="!contactForm.$valid" 
-			   class="btn btn-primary">Done!</a>
-			
-			<div class="form-group">
-				<label class="control-label">First name:</label>
-				<input class="form-control" type="text" ng-model="contact.firstName" />
-			</div>
-			<div class="form-group">
-				<label class="control-label">Last name:</label>
-				<input class="form-control" type="text" ng-model="contact.lastName" />
-			</div>
-			<div class="form-group" ng-class="{'has-error': contactForm.phone.$error.required}">
-				<label class="control-label" >Phone:</label>
-				<input class="form-control" name="phone" type="text" ng-model="contact.phone" required />
-			</div>
-			<div class="form-group" ng-class="{'has-error': contactForm.email.$error.email}">
-				<label class="control-label">Email:</label>
-				<input class="form-control" name="email" type="email" ng-model="contact.email" />
-			</div>
-			
-			</ng-form>
+			<contact-edit contact="contact"></contact-edit>
 		</div>
 
 		<!-- View -->
@@ -41,11 +17,7 @@
 			   ng-click="contact.isEditing = true" 
 			   class="btn btn-primary">Edit</a>
 
-			<div>
-				{{contact.firstName}} {{contact.lastName}}<br/>
-				{{contact.phone}}<br/>
-				<a ng-href="mailto:{{contact.email}}">{{contact.email}}</a>
-			</div>
+			<contact-view contact="contact" />
 		</div>
 
 	</div>

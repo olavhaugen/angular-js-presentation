@@ -4,6 +4,10 @@ angular.module('myApp', ['ngRoute']).config(function ($routeProvider){
 		.otherwise({ redirectTo: '/'});
 });
 
-angular.module('myApp').controller('HomeCtrl', function ($scope){
+angular.module('myApp').controller('HomeCtrl', function ($scope, ContactsService){
 	$scope.message = "Hello world!";
+
+	ContactsService.getAll().then(function (contacts) {
+		$scope.contacts = contacts;
+	});
 });

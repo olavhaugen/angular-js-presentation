@@ -1,0 +1,23 @@
+[
+{ 
+	"id": 1,
+	"firstName": "Kjell", 
+	"lastName": "Ljøstad", 
+	"phone": "+4795267129", 
+	"email": "kjell.ljostad@webstep.no"
+},
+{ 
+	"id": 2,
+	"firstName": "Tom Erik", 
+	"lastName": "Frydenlund", 
+	"phone": "+4748006480", 
+	"email": "tom.erik.frydenlund@webstep.no"
+},
+{ 
+	"id": 3,
+	"firstName": "Ove", 
+	"lastName": "Suhr", 
+	"phone": "+4790123078", 
+	"email": "ove.suhr@webstep.no"
+}
+]
